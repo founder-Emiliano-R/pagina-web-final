@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador - AurumVision Media</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/Recursos/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/Recursos/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Recursos/favicon/favicon.png">
+
+
+    <link rel="stylesheet" href="CSS/style.bundle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <!-- Event snippet for Enviar formulario de clientes potenciales conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17701645016/hIDaCO7ptLkbENjV5vhB',
+                'value': 1.0,
+                'currency': 'MXN',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html#inicio" class="logo-link">
+                    <img src="Recursos/Logotipo v2_screen-01.png" alt="AVM Logo" class="logo-icon">
+                    <span class="logo-text"><span class="gold">AURUM</span>VISION MEDIA</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li class="nav-item">
+                    <a href="portafolio.html">Portafolio</a>
+                    <ul class="submenu">
+                        <li><a href="portafolio.html#fotografia">Fotografía</a></li>
+                        <li><a href="portafolio.html#videografia">Videografía</a></li>
+                    </ul>
+                </li>
+                <li><a href="cotizador.html">Cotizador</a></li>
+                <li><a href="index.html#eventos">Eventos</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#paquetes">Paquetes</a></li>
+                <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+                <li><a href="index.html#opiniones">Opiniones</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li>
+                <p class="mobile-menu-toggle">
+                    Portafolio
+                </p>
+                <ul class="mobile-submenu">
+                    <li><a href="portafolio.html#fotografia">Fotografía</a></li>
+                    <li><a href="portafolio.html#videografia">Videografía</a></li>
+                </ul>
+            </li>
+            <li><a href="cotizador.html">Cotizador</a></li>
+            <li><a href="index.html#eventos">Eventos</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#paquetes">Paquetes</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#opiniones">Opiniones</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>COTIZA TU EVENTO</h1>
+            <p>Recibe una cotizacion en minutos</p>
+            <a href="#fechaEvento" class="cta-button">VER MÁS</a>
+        </div>
+        <div class="scroll-down">
+            <span>Desliza</span>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- COTIZADOR -->
+    <section class="cotizador-section">
+        <div class="container">
+            <div class="cotizador-container">
+                <!-- PROGRESS BAR -->
+                <div class="progress-bar">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Tipo de Evento</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Servicios</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Add-ons</div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Tus Datos</div>
+                    </div>
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-label">Resumen</div>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO -->
+                <form id="cotizadorForm" class="cotizador-form" novalidate>
+                    <!-- PASO 1: TIPO DE EVENTO -->
+                    <div class="form-step active" data-step="1">
+                        <h2>¿Qué tipo de evento o servicio necesitas?</h2>
+                        <div class="form-group mt-4">
+                            <label for="fechaEvento">Fecha del Evento / Sesión *</label>
+                            <input type="date" id="fechaEvento" name="fechaEvento" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lugarEvento">Lugar (opcional)</label>
+                            <input type="text" id="lugarEvento" name="lugarEvento"
+                                placeholder="Ej: Hotel Fiesta Americana, Ciudad Juárez">
+                        </div>
+                        <div class="evento-cards">
+                            <div class="evento-card" data-tipo="boda">
+                                <i class="bi bi-house-heart"></i>
+                                <h3>Boda</h3>
+                                <p>Fotografía y video para tu día especial</p>
+                            </div>
+                            <div class="evento-card" data-tipo="quinceanera">
+                                <i class="bi bi-gem"></i>
+                                <h3>XV Años</h3>
+                                <p>Captura tu celebración especial</p>
+                            </div>
+                            <div class="evento-card" data-tipo="individual">
+                                <i class="bi bi-person-badge"></i>
+                                <h3>Retratos / Branding</h3>
+                                <p>LinkedIn, corporativo, personal</p>
+                            </div>
+                            <div class="evento-card" data-tipo="maternidad">
+                                <i class="bi bi-heart-fill"></i>
+                                <h3>Maternidad</h3>
+                                <p>Sesiones de embarazo memorables</p>
+                            </div>
+                            <div class="evento-card" data-tipo="newborn">
+                                <i class="bi bi-balloon-heart"></i>
+                                <h3>Newborn</h3>
+                                <p>Primeros días de tu bebé</p>
+                            </div>
+                            <div class="evento-card" data-tipo="gastronomia">
+                                <i class="bi bi-cup-hot"></i>
+                                <h3>Gastronomía</h3>
+                                <p>Menú y platillos para restaurantes</p>
+                            </div>
+                            <div class="evento-card" data-tipo="moda">
+                                <i class="bi bi-bag-check"></i>
+                                <h3>Moda / E-commerce</h3>
+                                <p>Producto, ropa, catálogos</p>
+                            </div>
+                            <div class="evento-card" data-tipo="otro">
+                                <i class="bi bi-camera"></i>
+                                <h3>Otro Evento</h3>
+                                <p>Capturamos tus celebraciones especiales.</p>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-primary btn-next">
+                                    Siguiente <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PASO 2: SERVICIOS -->
+                    <div class="form-step" data-step="2">
+                        <h2>Selecciona los servicios que necesitas</h2>
+                        <p class="step-subtitle">Puedes seleccionar uno o más servicios</p>
+
+                        <div class="form-group">
+                            <label>Moneda</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="moneda" value="MXN" checked>
+                                    <span>MXN (Pesos Mexicanos)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="moneda" value="USD">
+                                    <span>USD (Dólares)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA BODAS -->
+                        <div id="servicios-boda" class="servicios-container" style="display: none;">
+                            <h3>Fotografía</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="boda-foto-5h" data-precio-mxn="6500"
+                                    data-precio-usd="351">
+                                    <h4>Fotografía 5 horas</h4>
+                                    <p class="descripcion">Cobertura fotográfica - Ceremonia + recepción</p>
+                                    <p class="precio"><span class="precio-mxn">$6,500</span><span class="precio-usd"
+                                            style="display:none;">US$351</span></p>
+                                    <p class="entregables">50-80 fotos editadas</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="boda-foto-8h" data-precio-mxn="10400"
+                                    data-precio-usd="562">
+                                    
+                                    <h4>Fotografía 8 horas</h4>
+                                    <p class="descripcion">Cobertura fotográfica completa</p>
+                                    <p class="precio"><span class="precio-mxn">$10,400</span><span class="precio-usd"
+                                            style="display:none;">US$562</span></p>
+                                    <p class="entregables">80-120 fotos editadas</p>
+                                </div>
+                                <div class="servicio-card" data-id="boda-foto-12h" data-precio-mxn="14950"
+                                    data-precio-usd="808">
+                                    <h4>Fotografía 12 horas</h4>
+                                    <p class="descripcion">Cobertura de preparación a salida</p>
+                                    <p class="precio"><span class="precio-mxn">$14,950</span><span class="precio-usd"
+                                            style="display:none;">US$808</span></p>
+                                    <p class="entregables">120-200 fotos editadas</p>
+                                </div>
+                            </div>
+
+                            <h3>Videografía</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="boda-video-5h" data-precio-mxn="7800"
+                                    data-precio-usd="421">
+                                    <h4>Videografía 5 horas</h4>
+                                    <p class="descripcion">Ceremonia + momentos clave</p>
+                                    <p class="precio"><span class="precio-mxn">$7,800</span><span class="precio-usd"
+                                            style="display:none;">US$421</span></p>
+                                    <p class="entregables">Highlight 3-5 min</p>
+                                </div>
+                                <div class="servicio-card" data-id="boda-video-8h" data-precio-mxn="12350"
+                                    data-precio-usd="668">
+                                    <h4>Videografía 8 horas</h4>
+                                    <p class="descripcion">Cobertura extendida</p>
+                                    <p class="precio"><span class="precio-mxn">$12,350</span><span class="precio-usd"
+                                            style="display:none;">US$668</span></p>
+                                    <p class="entregables">Highlight 5-10 min + ceremonia</p>
+                                </div>
+                                <div class="servicio-card" data-id="boda-video-12h" data-precio-mxn="16900"
+                                    data-precio-usd="913">
+                                    <h4>Videografía 12 horas</h4>
+                                    <p class="descripcion">Producción completa</p>
+                                    <p class="precio"><span class="precio-mxn">$16,900</span><span class="precio-usd"
+                                            style="display:none;">US$913</span></p>
+                                    <p class="entregables">Highlight + video completo 60-90 min</p>
+                                </div>
+                            </div>
+
+                            <h3>Paquetes</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="boda-combo-5h" data-precio-mxn="13585"
+                                    data-precio-usd="735">
+                                    <h4>Foto + Video 5 horas</h4>
+                                    <p class="descripcion">Paquete combinado - 5% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$13,585</span><span class="precio-usd"
+                                            style="display:none;">US$735</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="boda-combo-8h" data-precio-mxn="21613"
+                                    data-precio-usd="1168">
+                                    
+                                    <h4>Foto + Video 8 horas</h4>
+                                    <p class="descripcion">Paquete combinado - 5% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$21,613</span><span class="precio-usd"
+                                            style="display:none;">US$1,168</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                                <div class="servicio-card" data-id="boda-combo-12h" data-precio-mxn="30160"
+                                    data-precio-usd="1630">
+                                    <h4>Foto + Video 12 horas</h4>
+                                    <p class="descripcion">Paquete completo premium - 10% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$30,160</span><span class="precio-usd"
+                                            style="display:none;">US$1,630</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA XV AÑOS -->
+                        <div id="servicios-quinceanera" class="servicios-container" style="display: none;">
+                            <h3>Fotografía</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="xv-foto-5h" data-precio-mxn="6500"
+                                    data-precio-usd="351">
+                                    <h4>Fotografía 5 horas</h4>
+                                    <p class="descripcion">Cobertura fotográfica - Ceremonia + recepción</p>
+                                    <p class="precio"><span class="precio-mxn">$6,500</span><span class="precio-usd"
+                                            style="display:none;">US$351</span></p>
+                                    <p class="entregables">50-80 fotos editadas</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="xv-foto-8h" data-precio-mxn="10400"
+                                    data-precio-usd="562">
+                                    
+                                    <h4>Fotografía 8 horas</h4>
+                                    <p class="descripcion">Cobertura fotográfica completa</p>
+                                    <p class="precio"><span class="precio-mxn">$10,400</span><span class="precio-usd"
+                                            style="display:none;">US$562</span></p>
+                                    <p class="entregables">80-120 fotos editadas</p>
+                                </div>
+                                <div class="servicio-card" data-id="xv-foto-12h" data-precio-mxn="14950"
+                                    data-precio-usd="808">
+                                    <h4>Fotografía 12 horas</h4>
+                                    <p class="descripcion">Cobertura de preparación a salida</p>
+                                    <p class="precio"><span class="precio-mxn">$14,950</span><span class="precio-usd"
+                                            style="display:none;">US$808</span></p>
+                                    <p class="entregables">120-200 fotos editadas</p>
+                                </div>
+                            </div>
+
+                            <h3>Videografía</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="xv-video-5h" data-precio-mxn="7800"
+                                    data-precio-usd="421">
+                                    <h4>Videografía 5 horas</h4>
+                                    <p class="descripcion">Ceremonia + momentos clave</p>
+                                    <p class="precio"><span class="precio-mxn">$7,800</span><span class="precio-usd"
+                                            style="display:none;">US$421</span></p>
+                                    <p class="entregables">Highlight 3-5 min</p>
+                                </div>
+                                <div class="servicio-card" data-id="xv-video-8h" data-precio-mxn="12350"
+                                    data-precio-usd="668">
+                                    <h4>Videografía 8 horas</h4>
+                                    <p class="descripcion">Cobertura extendida</p>
+                                    <p class="precio"><span class="precio-mxn">$12,350</span><span class="precio-usd"
+                                            style="display:none;">US$668</span></p>
+                                    <p class="entregables">Highlight 5-10 min + ceremonia</p>
+                                </div>
+                            </div>
+
+                            <h3>Paquetes</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="xv-combo-5h" data-precio-mxn="13585"
+                                    data-precio-usd="735">
+                                    <h4>Foto + Video 5 horas</h4>
+                                    <p class="descripcion">Paquete combinado - 5% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$13,585</span><span class="precio-usd"
+                                            style="display:none;">US$735</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="xv-combo-8h" data-precio-mxn="21613"
+                                    data-precio-usd="1168">
+                                    
+                                    <h4>Foto + Video 8 horas</h4>
+                                    <p class="descripcion">Paquete combinado - 5% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$21,613</span><span class="precio-usd"
+                                            style="display:none;">US$1,168</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA INDIVIDUAL/BRANDING -->
+                        <div id="servicios-individual" class="servicios-container" style="display: none;">
+                            <h3>Sesiones</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="ind-basica" data-precio-mxn="1950"
+                                    data-precio-usd="105">
+                                    <h4>Sesión Básica 30-60 min</h4>
+                                    <p class="descripcion">1-2 cambios de outfit, fondos de estudio</p>
+                                    <p class="precio"><span class="precio-mxn">$1,950</span><span class="precio-usd"
+                                            style="display:none;">US$105</span></p>
+                                    <p class="entregables">3-5 fotos editadas, LinkedIn ready</p>
+                                    <p class="incluye">Iluminación profesional, galería online</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="ind-estandar" data-precio-mxn="3250"
+                                    data-precio-usd="175">
+                                    
+                                    <h4>Sesión Estándar 1-2 horas</h4>
+                                    <p class="descripcion">2-3 cambios de outfit, múltiples fondos</p>
+                                    <p class="precio"><span class="precio-mxn">$3,250</span><span class="precio-usd"
+                                            style="display:none;">US$175</span></p>
+                                    <p class="entregables">5-10 fotos editadas por hora</p>
+                                    <p class="incluye">Formatos optimizados para redes</p>
+                                </div>
+                                <div class="servicio-card" data-id="ind-branding" data-precio-mxn="5850"
+                                    data-precio-usd="316">
+                                    <h4>Personal Branding 2-3 horas</h4>
+                                    <p class="descripcion">Múltiples looks y locaciones</p>
+                                    <p class="precio"><span class="precio-mxn">$5,850</span><span class="precio-usd"
+                                            style="display:none;">US$316</span></p>
+                                    <p class="entregables">15-25 fotos editadas profesionales</p>
+                                    <p class="incluye">Consulta previa, múltiples locaciones</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA MATERNIDAD -->
+                        <div id="servicios-maternidad" class="servicios-container" style="display: none;">
+                            <h3>Sesiones</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="mat-mini" data-precio-mxn="1300"
+                                    data-precio-usd="70">
+                                    <h4>Mini Sesión 45-60 min</h4>
+                                    <p class="descripcion">Sesión rápida, estudio únicamente</p>
+                                    <p class="precio"><span class="precio-mxn">$1,300</span><span class="precio-usd"
+                                            style="display:none;">US$70</span></p>
+                                    <p class="entregables">5 fotos editadas</p>
+                                    <p class="incluye">Pareja e hijos incluidos, telas y accesorios</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="mat-basica" data-precio-mxn="2500"
+                                    data-precio-usd="135">
+                                    
+                                    <h4>Sesión Básica 60-90 min</h4>
+                                    <p class="descripcion">Estudio o exterior, múltiples cambios</p>
+                                    <p class="precio"><span class="precio-mxn">$2,500</span><span class="precio-usd"
+                                            style="display:none;">US$135</span></p>
+                                    <p class="entregables">12 fotos editadas</p>
+                                    <p class="incluye">Familia completa, telas, consulta previa</p>
+                                </div>
+                                <div class="servicio-card" data-id="mat-premium" data-precio-mxn="3575"
+                                    data-precio-usd="193">
+                                    <h4>Sesión Premium 90-120 min</h4>
+                                    <p class="descripcion">Sesión completa + archivos originales</p>
+                                    <p class="precio"><span class="precio-mxn">$3,575</span><span class="precio-usd"
+                                            style="display:none;">US$193</span></p>
+                                    <p class="entregables">20 fotos editadas + originales sin editar</p>
+                                    <p class="incluye">Todo incluido, múltiples locaciones</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA NEWBORN -->
+                        <div id="servicios-newborn" class="servicios-container" style="display: none;">
+                            <h3>Sesiones</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="nb-basico" data-precio-mxn="3900"
+                                    data-precio-usd="211">
+                                    <h4>Sesión Newborn Básica</h4>
+                                    <p class="descripcion">Primeros 10-15 días, ambiente controlado</p>
+                                    <p class="precio"><span class="precio-mxn">$3,900</span><span class="precio-usd"
+                                            style="display:none;">US$211</span></p>
+                                    <p class="entregables">10 fotos premium + 15 básicas</p>
+                                    <p class="incluye">Vestuarios, accesorios, padres y hermanos</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="nb-familiar" data-precio-mxn="4550"
+                                    data-precio-usd="246">
+                                    
+                                    <h4>Sesión Newborn Familiar</h4>
+                                    <p class="descripcion">Incluye fotos familiares completas</p>
+                                    <p class="precio"><span class="precio-mxn">$4,550</span><span class="precio-usd"
+                                            style="display:none;">US$246</span></p>
+                                    <p class="entregables">15 fotos premium + 20 básicas</p>
+                                    <p class="incluye">Familia completa, múltiples setups</p>
+                                </div>
+                                <div class="servicio-card" data-id="nb-completa" data-precio-mxn="5200"
+                                    data-precio-usd="281">
+                                    <h4>Sesión Newborn Completa</h4>
+                                    <p class="descripcion">Paquete premium todo incluido</p>
+                                    <p class="precio"><span class="precio-mxn">$5,200</span><span class="precio-usd"
+                                            style="display:none;">US$281</span></p>
+                                    <p class="entregables">20 fotos premium + 30 básicas + impresiones</p>
+                                    <p class="incluye">Todo incluido, ambiente profesional</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA GASTRONOMIA -->
+                        <div id="servicios-gastronomia" class="servicios-container" style="display: none;">
+                            <h3>Paquetes</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="food-5platillos" data-precio-mxn="2275"
+                                    data-precio-usd="124">
+                                    <h4>5 Platillos</h4>
+                                    <p class="descripcion">Ideal para menú pequeño o redes sociales</p>
+                                    <p class="precio"><span class="precio-mxn">$2,275</span><span class="precio-usd"
+                                            style="display:none;">US$124</span></p>
+                                    <p class="entregables">15-20 fotos editadas finales</p>
+                                    <p class="incluye">2-4 ángulos por platillo, optimizado para web</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="food-10platillos" data-precio-mxn="3900"
+                                    data-precio-usd="211">
+                                    
+                                    <h4>10 Platillos</h4>
+                                    <p class="descripcion">Menú completo para restaurante</p>
+                                    <p class="precio"><span class="precio-mxn">$3,900</span><span class="precio-usd"
+                                            style="display:none;">US$211</span></p>
+                                    <p class="entregables">30-35 fotos editadas finales</p>
+                                    <p class="incluye">Múltiples ángulos, styling básico</p>
+                                </div>
+                                <div class="servicio-card" data-id="food-15platillos" data-precio-mxn="5525"
+                                    data-precio-usd="299">
+                                    <h4>15 Platillos</h4>
+                                    <p class="descripcion">Menú extenso + lifestyle shots</p>
+                                    <p class="precio"><span class="precio-mxn">$5,525</span><span class="precio-usd"
+                                            style="display:none;">US$299</span></p>
+                                    <p class="entregables">40-50 fotos editadas finales</p>
+                                    <p class="incluye">Styling profesional, fotos ambiente</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA MODA/E-COMMERCE -->
+                        <div id="servicios-moda" class="servicios-container" style="display: none;">
+                            <h3>E-commerce (Sin Modelo)</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="ecom-basico" data-precio-mxn="2925"
+                                    data-precio-usd="158">
+                                    <h4>E-commerce Básico</h4>
+                                    <p class="descripcion">10-15 prendas, fondo blanco</p>
+                                    <p class="precio"><span class="precio-mxn">$2,925</span><span class="precio-usd"
+                                            style="display:none;">US$158</span></p>
+                                    <p class="entregables">30-45 fotos editadas (3 ángulos/prenda)</p>
+                                    <p class="incluye">Fondo blanco, flat lay, edición básica</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="ecom-profesional" data-precio-mxn="5200"
+                                    data-precio-usd="281">
+                                    
+                                    <h4>E-commerce Profesional</h4>
+                                    <p class="descripcion">20-30 prendas, múltiples setups</p>
+                                    <p class="precio"><span class="precio-mxn">$5,200</span><span class="precio-usd"
+                                            style="display:none;">US$281</span></p>
+                                    <p class="entregables">60-90 fotos editadas finales</p>
+                                    <p class="incluye">Múltiples fondos, maniquí invisible</p>
+                                </div>
+                            </div>
+
+                            <h3>Lifestyle (Con Modelo)</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="lifestyle-basico" data-precio-mxn="6500"
+                                    data-precio-usd="351">
+                                    <h4>Lifestyle con Modelo</h4>
+                                    <p class="descripcion">8-12 prendas/looks, modelo incluido</p>
+                                    <p class="precio"><span class="precio-mxn">$6,500</span><span class="precio-usd"
+                                            style="display:none;">US$351</span></p>
+                                    <p class="entregables">30-40 fotos editadas finales</p>
+                                    <p class="incluye">Modelo profesional, estudio o exterior</p>
+                                </div>
+                                <div class="servicio-card" data-id="lifestyle-profesional" data-precio-mxn="10400"
+                                    data-precio-usd="562">
+                                    <h4>Lifestyle Profesional</h4>
+                                    <p class="descripcion">15-20 looks, múltiples locaciones</p>
+                                    <p class="precio"><span class="precio-mxn">$10,400</span><span class="precio-usd"
+                                            style="display:none;">US$562</span></p>
+                                    <p class="entregables">50-75 fotos editadas finales</p>
+                                    <p class="incluye">Modelo, styling, múltiples locaciones</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SERVICIOS PARA OTRO EVENTO -->
+                        <div id="servicios-otro" class="servicios-container" style="display: none;">
+                            <h3>Fotografía</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="otro-foto-3h" data-precio-mxn="4550"
+                                    data-precio-usd="246">
+                                    <h4>Fotografía 3 horas</h4>
+                                    <p class="descripcion">Cobertura básica del evento</p>
+                                    <p class="precio"><span class="precio-mxn">$4,550</span><span class="precio-usd"
+                                            style="display:none;">US$246</span></p>
+                                    <p class="entregables">40-60 fotos editadas</p>
+                                </div>
+                                <div class="servicio-card popular" data-id="otro-foto-5h" data-precio-mxn="6500"
+                                    data-precio-usd="351">
+                                    
+                                    <h4>Fotografía 5 horas</h4>
+                                    <p class="descripcion">Cobertura completa del evento</p>
+                                    <p class="precio"><span class="precio-mxn">$6,500</span><span class="precio-usd"
+                                            style="display:none;">US$351</span></p>
+                                    <p class="entregables">60-80 fotos editadas</p>
+                                </div>
+                            </div>
+
+                            <h3>Videografía</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="otro-video-3h" data-precio-mxn="5200"
+                                    data-precio-usd="281">
+                                    <h4>Videografía 3 horas</h4>
+                                    <p class="descripcion">Momentos principales</p>
+                                    <p class="precio"><span class="precio-mxn">$5,200</span><span class="precio-usd"
+                                            style="display:none;">US$281</span></p>
+                                    <p class="entregables">Highlight 2-4 min</p>
+                                </div>
+                                <div class="servicio-card" data-id="otro-video-5h" data-precio-mxn="7800"
+                                    data-precio-usd="421">
+                                    <h4>Videografía 5 horas</h4>
+                                    <p class="descripcion">Cobertura completa</p>
+                                    <p class="precio"><span class="precio-mxn">$7,800</span><span class="precio-usd"
+                                            style="display:none;">US$421</span></p>
+                                    <p class="entregables">Highlight 4-6 min</p>
+                                </div>
+                            </div>
+
+                            <h3>Paquetes</h3>
+                            <div class="servicios-grid">
+                                <div class="servicio-card" data-id="otro-combo-3h" data-precio-mxn="9263"
+                                    data-precio-usd="501">
+                                    <h4>Foto + Video 3 horas</h4>
+                                    <p class="descripcion">Paquete combinado - 5% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$9,263</span><span class="precio-usd"
+                                            style="display:none;">US$501</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                                <div class="servicio-card" data-id="otro-combo-5h" data-precio-mxn="13585"
+                                    data-precio-usd="735">
+                                    <h4>Foto + Video 5 horas</h4>
+                                    <p class="descripcion">Paquete completo - 5% descuento</p>
+                                    <p class="precio"><span class="precio-mxn">$13,585</span><span class="precio-usd"
+                                            style="display:none;">US$735</span></p>
+                                    <p class="entregables">Foto + video completo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary btn-prev">
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </button>
+                            <button type="button" class="btn btn-primary btn-next">
+                                Siguiente <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- PASO 3: ADD-ONS -->
+                    <div class="form-step" data-step="3">
+                        <h2>¿Quieres agregar algo extra?</h2>
+                        <p class="step-subtitle">Servicios adicionales opcionales</p>
+
+                        <!-- ADD-ONS PARA BODAS/XV AÑOS -->
+                        <div id="addons-eventos" class="addons-container" style="display: none;">
+                            <h3>Para tu evento</h3>
+                            <div class="addons-grid">
+                                <div class="addon-card" data-id="addon-compromiso" data-precio-mxn="1625"
+                                    data-precio-usd="88">
+                                    <h4>Sesión de Compromiso</h4>
+                                    <p class="descripcion">1 hora, 20-30 fotos editadas</p>
+                                    <p class="precio"><span class="precio-mxn">$1,625</span><span class="precio-usd"
+                                            style="display:none;">US$88</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-album-20" data-precio-mxn="2275"
+                                    data-precio-usd="124">
+                                    <h4>Álbum Fotográfico 20 págs</h4>
+                                    <p class="descripcion">Hardcover premium</p>
+                                    <p class="precio"><span class="precio-mxn">$2,275</span><span class="precio-usd"
+                                            style="display:none;">US$124</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-album-30" data-precio-mxn="3250"
+                                    data-precio-usd="176">
+                                    <h4>Álbum Fotográfico 30 págs</h4>
+                                    <p class="descripcion">Hardcover deluxe</p>
+                                    <p class="precio"><span class="precio-mxn">$3,250</span><span class="precio-usd"
+                                            style="display:none;">US$176</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-segundo-foto" data-precio-mxn="1950"
+                                    data-precio-usd="107">
+                                    <h4>Segundo Fotógrafo</h4>
+                                    <p class="descripcion">Por 4 horas</p>
+                                    <p class="precio"><span class="precio-mxn">$1,950</span><span class="precio-usd"
+                                            style="display:none;">US$107</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-segundo-video" data-precio-mxn="1625"
+                                    data-precio-usd="88">
+                                    <h4>Segundo Videógrafo</h4>
+                                    <p class="descripcion">Por 4 horas</p>
+                                    <p class="precio"><span class="precio-mxn">$1,625</span><span class="precio-usd"
+                                            style="display:none;">US$88</span></p>
+                                </div>
+                                <div class="addon-card popular" data-id="addon-dron" data-precio-mxn="1950"
+                                    data-precio-usd="107">
+                                    
+                                    <h4>Footage de Dron 4K</h4>
+                                    <p class="descripcion">Tomas aéreas profesionales</p>
+                                    <p class="precio"><span class="precio-mxn">$1,950</span><span class="precio-usd"
+                                            style="display:none;">US$107</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ADD-ONS PARA SESIONES -->
+                        <div id="addons-sesiones" class="addons-container" style="display: none;">
+                            <h3>Para tu sesión</h3>
+                            <div class="addons-grid">
+                                <div class="addon-card" data-id="addon-impresion-20x30" data-precio-mxn="228"
+                                    data-precio-usd="12">
+                                    <h4>Impresión 20x30 cm enmarcada</h4>
+                                    <p class="descripcion">Marco profesional incluido</p>
+                                    <p class="precio"><span class="precio-mxn">$228</span><span class="precio-usd"
+                                            style="display:none;">US$12</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-impresion-30x40" data-precio-mxn="423"
+                                    data-precio-usd="23">
+                                    <h4>Impresión 30x40 cm enmarcada</h4>
+                                    <p class="descripcion">Marco profesional premium</p>
+                                    <p class="precio"><span class="precio-mxn">$423</span><span class="precio-usd"
+                                            style="display:none;">US$23</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-hora-extra" data-precio-mxn="1300"
+                                    data-precio-usd="72">
+                                    <h4>Hora Extra</h4>
+                                    <p class="descripcion">Extensión de sesión</p>
+                                    <p class="precio"><span class="precio-mxn">$1,300</span><span class="precio-usd"
+                                            style="display:none;">US$72</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-entrega-express" data-precio-mxn="975"
+                                    data-precio-usd="52">
+                                    <h4>Entrega Express (24-48h)</h4>
+                                    <p class="descripcion">Procesamiento prioritario</p>
+                                    <p class="precio"><span class="precio-mxn">$975</span><span class="precio-usd"
+                                            style="display:none;">US$52</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ADD-ONS PARA COMERCIAL -->
+                        <div id="addons-comercial" class="addons-container" style="display: none;">
+                            <h3>Para tu proyecto</h3>
+                            <div class="addons-grid">
+                                <div class="addon-card" data-id="addon-video-clips" data-precio-mxn="1625"
+                                    data-precio-usd="88">
+                                    <h4>Video Clips (3-5 clips)</h4>
+                                    <p class="descripcion">15-30 segundos c/u</p>
+                                    <p class="precio"><span class="precio-mxn">$1,625</span><span class="precio-usd"
+                                            style="display:none;">US$88</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-video-redes" data-precio-mxn="520"
+                                    data-precio-usd="29">
+                                    <h4>Video para redes (vertical)</h4>
+                                    <p class="descripcion">Optimizado Instagram/TikTok</p>
+                                    <p class="precio"><span class="precio-mxn">$520</span><span class="precio-usd"
+                                            style="display:none;">US$29</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-hora-extra-com" data-precio-mxn="1300"
+                                    data-precio-usd="72">
+                                    <h4>Hora Extra</h4>
+                                    <p class="descripcion">Extensión de sesión</p>
+                                    <p class="precio"><span class="precio-mxn">$1,300</span><span class="precio-usd"
+                                            style="display:none;">US$72</span></p>
+                                </div>
+                                <div class="addon-card" data-id="addon-entrega-express-com" data-precio-mxn="975"
+                                    data-precio-usd="52">
+                                    <h4>Entrega Express (24-48h)</h4>
+                                    <p class="descripcion">Procesamiento prioritario</p>
+                                    <p class="precio"><span class="precio-mxn">$975</span><span class="precio-usd"
+                                            style="display:none;">US$52</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary btn-prev">
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </button>
+                            <button type="button" class="btn btn-primary btn-next">
+                                Siguiente <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- PASO 4: DATOS DEL CLIENTE -->
+                    <div class="form-step" data-step="4">
+                        <h2>Cuéntanos sobre ti</h2>
+                        <p class="step-subtitle">Para enviarte tu cotización personalizada</p>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombreCliente">Nombre completo *</label>
+                                <input type="text" id="nombreCliente" name="nombreCliente" required
+                                    placeholder="Juan Pérez">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="+52 656 123 4567">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="numeroInvitados">Número de invitados (opcional)</label>
+                                <input type="number" id="numeroInvitados" name="numeroInvitados" placeholder="Ej: 150">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notas">Notas adicionales (opcional)</label>
+                            <textarea id="notas" name="notas" rows="4"
+                                placeholder="Cuéntanos más sobre tu evento o cualquier petición especial..."></textarea>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary btn-prev">
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </button>
+                            <button type="button" class="btn btn-primary btn-next">
+                                Ver Resumen <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- PASO 5: RESUMEN -->
+                    <div class="form-step" data-step="5">
+                        <h2>Resumen de tu Cotización</h2>
+                        <p class="step-subtitle">Revisa los detalles antes de enviar</p>
+
+                        <div class="resumen-container">
+                            <div class="resumen-section">
+                                <h3><i class="fas fa-calendar"></i> Información del Evento</h3>
+                                <div id="resumenEvento"></div>
+                            </div>
+
+                            <div class="resumen-section">
+                                <h3><i class="fas fa-camera"></i> Servicios Seleccionados</h3>
+                                <div id="resumenServicios"></div>
+                            </div>
+
+                            <div class="resumen-section" id="resumenAddonsSection" style="display: none;">
+                                <h3><i class="fas fa-plus"></i> Servicios Adicionales</h3>
+                                <div id="resumenAddons"></div>
+                            </div>
+
+                            <div class="resumen-total">
+                                <div class="total-row subtotal">
+                                    <span>Subtotal:</span>
+                                    <span id="resumenSubtotal">$0</span>
+                                </div>
+                                <div class="total-row descuento" id="resumenDescuentoRow" style="display: none;">
+                                    <span>Descuento:</span>
+                                    <span id="resumenDescuento">$0</span>
+                                </div>
+                                <div class="total-row total">
+                                    <span>TOTAL:</span>
+                                    <span id="resumenTotal">$0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary btn-prev">
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </button>
+                            <button onclick="gtag_report_conversion()" type="submit" class="btn btn-success btn-submit">
+                                <i class="fas fa-paper-plane"></i> Enviar Cotización
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- SIDEBAR CON RESUMEN EN TIEMPO REAL -->
+                <div class="cotizador-sidebar">
+                    <div class="sidebar-sticky">
+                        <h3>Tu Cotización</h3>
+                        <div class="sidebar-summary">
+                            <div class="summary-item">
+                                <span>Tipo de evento:</span>
+                                <strong id="sidebarEvento">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Fecha:</span>
+                                <strong id="sidebarFecha">-</strong>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-item">
+                                <span>Servicios:</span>
+                                <strong id="sidebarNumServicios">0</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Add-ons:</span>
+                                <strong id="sidebarNumAddons">0</strong>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-total">
+                                <span>Total Estimado:</span>
+                                <strong id="sidebarTotal" class="total-amount">$0</strong>
+                            </div>
+                        </div>
+                        <div class="sidebar-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Esta es una cotización estimada. Recibirás los detalles completos por email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE ÉXITO -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>¡Cotización Enviada!</h2>
+            <p>Hemos recibido tu solicitud correctamente.</p>
+            <p>Tu número de cotización es: <strong id="numeroCotizacion"></strong></p>
+            <p class="modal-subtitle">Te hemos enviado un email con todos los detalles a <strong
+                    id="emailConfirmacion"></strong></p>
+            <div class="modal-actions">
+                <button onclick="location.reload()" class="btn btn-primary">Nueva Cotización</button>
+                <a href="index.html" class="btn btn-secondary">Volver al Inicio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE ERROR -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content error">
+            <div class="modal-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h2>Oops... Algo salió mal</h2>
+            <p id="errorMessage">Hubo un problema al enviar tu cotización.</p>
+            <div class="modal-actions">
+                <button onclick="closeModal('errorModal')" class="btn btn-primary">Reintentar</button>
+                <a href="mailto:founder@aurumvisionmedia.com" class="btn btn-secondary">Contactar Directamente</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AurumVision Media. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="Javascript/main.js"></script>
+    <script src="Javascript/cotizador.js"></script>
+</body>
+
+</html>
